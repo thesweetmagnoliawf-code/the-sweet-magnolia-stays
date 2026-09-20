@@ -29,6 +29,6 @@
 - Page loads, all sections render, scroll reveals fire, text content matches user's copy (screenshot-tested end to end)
 
 ## Backlog
-- P0: Swap in user's real logo file when provided
+- Done (2026-09-20): Real logo swapped into hero (user-provided artwork, blended into ivory background)
 - P1: Optional notify-me email capture (user declined for now)
 - P2: Direct booking flow + resident portal (the products being teased)

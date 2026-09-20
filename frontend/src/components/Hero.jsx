@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MaskedLine } from "@/components/MaskedLine";
-import { MagnoliaMark } from "@/components/MagnoliaMark";
 
 const EASE = [0.22, 1, 0.36, 1];
 
@@ -12,7 +11,6 @@ export default function Hero() {
     offset: ["start start", "end start"],
   });
   const contentY = useTransform(scrollYProgress, [0, 1], [0, -110]);
-  const markRotate = useTransform(scrollYProgress, [0, 1], [0, 90]);
   const fade = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
 
   return (
@@ -25,40 +23,34 @@ export default function Hero() {
         style={{ y: contentY, opacity: fade }}
         className="flex flex-col items-center text-center"
       >
-        <motion.div
-          style={{ rotate: markRotate }}
-          initial={{ opacity: 0, scale: 0.7 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.4, ease: EASE }}
-        >
-          <MagnoliaMark className="h-16 w-16 text-[#232F26] sm:h-20 sm:w-20" />
-        </motion.div>
-
         <motion.p
           data-testid="hero-eyebrow"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1.2 }}
-          className="mt-12 text-[11px] uppercase tracking-[0.4em] text-[#4A4D4A]"
+          transition={{ delay: 0.2, duration: 1.2 }}
+          className="text-[11px] uppercase tracking-[0.4em] text-[#4A4D4A]"
         >
           Welcome to
         </motion.p>
 
-        <h1 data-testid="brand-logo" className="mt-5 font-display text-[#1A1B1A]">
-          <MaskedLine delay={0.2} className="text-4xl tracking-tight sm:text-5xl lg:text-6xl">
-            The Sweet
-          </MaskedLine>
-          <MaskedLine
-            delay={0.38}
-            className="text-6xl italic tracking-tighter text-[#232F26] sm:text-7xl lg:text-8xl"
-          >
-            Magnolia
-          </MaskedLine>
-        </h1>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.94, y: 24 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1.4, delay: 0.35, ease: EASE }}
+          className="mt-6"
+        >
+          <img
+            src="/the-sweet-magnolia-logo.png"
+            alt="The Sweet Magnolia — Stays · Homes · Hospitality"
+            data-testid="brand-logo"
+            className="w-64 mix-blend-multiply sm:w-80 lg:w-96"
+          />
+          <h1 className="sr-only">The Sweet Magnolia</h1>
+        </motion.div>
 
         <div
           data-testid="hero-intro-lines"
-          className="mt-12 font-display text-xl leading-relaxed text-[#4A4D4A] sm:text-2xl"
+          className="mt-8 font-display text-xl leading-relaxed text-[#4A4D4A] sm:text-2xl"
         >
           <MaskedLine delay={0.65}>Beautiful stays.</MaskedLine>
           <MaskedLine delay={0.8}>Thoughtful homes.</MaskedLine>
