@@ -46,7 +46,7 @@ export default function Manifesto() {
               src={process.env.PUBLIC_URL + "/the-sweet-magnolia-logo.png"}
               alt="A white magnolia blossom in soft light"
               data-testid="manifesto-image"
-              className="aspect-[3/4] w-full scale-110 object-cover"
+              className="aspect-[3/4] w-full object-contain"
             />
           </div>
         </motion.div>
