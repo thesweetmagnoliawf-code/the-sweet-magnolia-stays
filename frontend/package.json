@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "private": true,"homepage": "https://thesweetmagnoliawf-code.github.io/the-sweet-magnolia-stays",
+  "private": true,"homepage": "https://www.thesweetmagnoliastays.com",
   "dependencies": {
     "@hookform/resolvers": "5.0.1",
     "@radix-ui/react-accordion": "1.2.8",
