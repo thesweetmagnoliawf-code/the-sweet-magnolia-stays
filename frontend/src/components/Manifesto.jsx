@@ -43,7 +43,7 @@ export default function Manifesto() {
           <div className="overflow-hidden">
             <motion.img
               style={{ y: imgY }}
-              src="https://images.unsplash.com/photo-1474112704314-8162b7749a90?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwyfHxtYWdub2xpYSUyMGZsb3dlciUyMG1pbmltYWxpc3R8ZW58MHx8fHwxNzg5ODc3MDQyfDA&ixlib=rb-4.1.0&q=85"
+              src={process.env.PUBLIC_URL + "/the-sweet-magnolia-logo.png"}
               alt="A white magnolia blossom in soft light"
               data-testid="manifesto-image"
               className="aspect-[3/4] w-full scale-110 object-cover"
