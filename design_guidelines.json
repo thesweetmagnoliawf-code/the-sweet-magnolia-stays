@@ -1,0 +1,91 @@
+{
+  "theme": "light",
+  "design_philosophy": "Elegant & minimal, leaning into warm southern elegance. Awwwards-worthy art direction with generous whitespace, refined typography, and premium motion. Avoid generic minimalism; embrace atmosphere through subtle grain, rich textures, and editorial layouts.",
+  "typography": {
+    "fonts": [
+      {
+        "family": "Cormorant Garamond",
+        "type": "serif",
+        "usage": "Headings, Logo fallback, Marquee, primary display text",
+        "import_url": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      },
+      {
+        "family": "Manrope",
+        "type": "sans-serif",
+        "usage": "Body text, small caps labels, secondary copy",
+        "import_url": "https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap"
+      }
+    ],
+    "guidelines": "Use tight tracking on large serif headings (tracking-tighter). Body text should be airy with loose line-height (leading-relaxed). Labels use uppercase with wide letter-spacing (tracking-[0.2em])."
+  },
+  "colors": {
+    "archetype": "Organic & Earthy / Luxury",
+    "palette": {
+      "primary_bg": "#F7F5F0",
+      "secondary_bg": "#232F26",
+      "text_primary": "#1A1B1A",
+      "text_secondary": "#4A4D4A",
+      "text_on_dark": "#F7F5F0",
+      "accent": "#C4A484"
+    },
+    "guidelines": "Avoid pure black and pure white. Base is a warm cream/ivory. Secondary sections use a deep forest green. Accents use a soft muted gold/terracotta. Contrast is paramount for readability."
+  },
+  "visual_enhancers": {
+    "texture": "Subtle noise/grain overlay across the entire page (opacity 2-4% maximum) to give a tactile, print-like feel.",
+    "surfaces": "Avoid heavy drop shadows or glassmorphism. Use flat surfaces with generous negative space. If a border is needed, use 1px solid with 10% opacity.",
+    "parallax": "Subtle image parallax on scroll, never exceeding 15% translation difference from the scroll speed."
+  },
+  "layouts": {
+    "hero": "Centered, high-impact. A refined typographic logo ('The Sweet Magnolia' in Cormorant Garamond italic/regular mix) sitting centrally. Below it, a line-by-line kinetic reveal of the intro text using Framer Motion.",
+    "spacing": "Exaggerated vertical rhythm. Use py-24 to py-40 between sections.",
+    "alignment": "Hero is centered as requested, but subsequent sections should introduce subtle asymmetry to create visual tension (e.g., text block offset to a 4-column span in a 12-column grid)."
+  },
+  "motion": {
+    "scroll": "Lenis smooth momentum scrolling is MANDATORY. This dictates the premium feel of the page.",
+    "reveals": "Framer Motion line-by-line masking (kinetic typography) for the hero intro. Staggered fade-up for secondary text.",
+    "marquee": "Ultra-slow editorial drift (using framer-motion or react-fast-marquee) for the 'Beautiful stays. Thoughtful homes. Seamless living.' text. Avoid fast, cheap ticker effects."
+  },
+  "image_urls": [
+    {
+      "url": "https://images.unsplash.com/photo-1680773525468-eda783c5bfe7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwYm91dGlxdWUlMjBob3RlbCUyMGludGVyaW9yfGVufDB8fHx8MTc4OTg3NzA0M3ww&ixlib=rb-4.1.0&q=85",
+      "category": "hero_background_or_parallax",
+      "description": "Warm, elegant boutique hotel interior living space with wooden floors. Can be used as a heavily masked/opacity-reduced parallax backdrop."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1474112704314-8162b7749a90?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwyfHxtYWdub2xpYSUyMGZsb3dlciUyMG1pbmltYWxpc3R8ZW58MHx8fHwxNzg5ODc3MDQyfDA&ixlib=rb-4.1.0&q=85",
+      "category": "texture_or_manifesto_image",
+      "description": "Close up white magnolia flower. Great for a subtle offset image next to the manifesto paragraph."
+    }
+  ],
+  "content_mapping": {
+    "hero": {
+      "logo": "The Sweet Magnolia (Typographic Monogram / Serif)",
+      "intro": "Welcome to The Sweet Magnolia"
+    },
+    "marquee": {
+      "text": "Beautiful stays. Thoughtful homes. Seamless living."
+    },
+    "manifesto": {
+      "text": "Whether you're booking a getaway or calling one of our properties home, The Sweet Magnolia brings comfort, thoughtful hospitality, and effortless rental management together in one place."
+    },
+    "coming_soon": {
+      "notice": "Direct Booking & Resident Portal — Coming Soon",
+      "closer": "Stay awhile. Feel at home."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Ensure `lenis` is installed and wrapped around the main layout for smooth scrolling.",
+    "Use `framer-motion` for kinetic text reveals. Create a mask wrapper (overflow-hidden) around each line of the hero text and animate the text's Y transform from 100% to 0%.",
+    "Construct a custom pure CSS noise overlay class (pointer-events-none, fixed, inset-0, mix-blend-multiply) and apply it to the main container.",
+    "For the logo, since an image isn't provided, create a beautiful text-based lockup using Cormorant Garamond, varying weights or italics for an editorial look.",
+    "Never use `transition: all`. Define specific transition properties.",
+    "Do not center-align the manifesto paragraph; give it an offset left margin or place it in a restricted column (e.g., max-w-2xl) to break the symmetry.",
+    "All interactive elements must include a `data-testid` attribute (e.g. `data-testid=\"coming-soon-notice\"`)."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not converge toward generic outputs. Use custom HTML/Tailwind over basic components for this marketing landing page.",
+    "No default blue links or generic buttons. Maintain the color archetype strictly.",
+    "Create depth through typography scale (very large display sizes vs tiny uppercase tracking labels) rather than shadows.",
+    "Ensure the hero overlay on images (if used) is no darker than bg-black/40. If using a light theme, use bg-[#F7F5F0]/80 for readability while letting the image breathe."
+  ]
+}
