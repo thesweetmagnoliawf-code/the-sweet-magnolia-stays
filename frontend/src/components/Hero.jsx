@@ -40,7 +40,7 @@ export default function Hero() {
           className="mt-6"
         >
           <img
-            src="/the-sweet-magnolia-logo.png"
+            src={process.env.PUBLIC_URL + "/the-sweet-magnolia-logo.png"}
             alt="The Sweet Magnolia — Stays · Homes · Hospitality"
             data-testid="brand-logo"
             className="w-64 mix-blend-multiply sm:w-80 lg:w-96"
