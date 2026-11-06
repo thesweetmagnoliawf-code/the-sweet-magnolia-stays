@@ -18,6 +18,10 @@
     p { margin: .5rem 0; }
     section { padding: 1.4rem; margin-bottom: 1rem; border: 1px solid #d8d9cf; border-radius: .65rem; background: #fffdf8; }
     a { color: inherit; text-underline-offset: .2em; }
+    .room-photo { display: block; width: 100%; height: auto; border-radius: .4rem; }
+    .photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: .75rem; margin-top: 1rem; }
+    figure { margin: 0; }
+    figcaption { margin-top: .35rem; font-size: .875rem; }
     .property { font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
   </style>
 </head>
@@ -30,14 +34,34 @@
       <p>Our Raleigh home accommodates up to 12 registered guests.</p>
     </header>
     <section>
-      <h2>Bedroom beds</h2>
-      <p>Four bedrooms have one king bed and three queen beds in total, with room for up to eight guests.</p>
+      <h2>Level 1 queen bedroom</h2>
+      <p>This downstairs bedroom has a queen bed and a full bathroom on the same level. You can reach the room without climbing a full flight of stairs.</p>
+      <div class="photos"><img class="room-photo" src="level-one-queen.webp" alt="Level 1 queen bed beside a window and beneath blue botanical artwork" width="1050" height="700" loading="lazy" decoding="async"></div>
     </section>
     <section>
-      <h2>Extra sleeping options</h2>
-      <p>For reservations with more than eight guests, a sofa bed and two twin air mattresses are available as needed.</p>
-      <p>The twin air mattresses are in the linen closet. Each has a built-in pump.</p>
-      <p>For help setting up the sofa bed, please message us through your booking platform.</p>
+      <h2>Primary king bedroom</h2>
+      <p>The primary bedroom has a king bed.</p>
+      <div class="photos">
+        <img class="room-photo" src="primary-king.webp" alt="King bed between two windows in the primary bedroom" width="1050" height="700" loading="lazy" decoding="async">
+        <img class="room-photo" src="primary-king-second-view.webp" alt="Primary bedroom from the other side, showing the king bed and wall-mounted TV" width="1050" height="700" loading="lazy" decoding="async">
+      </div>
+    </section>
+    <section>
+      <h2>Two additional queen bedrooms</h2>
+      <p>Each room has one queen bed. Together, the four bedrooms sleep up to eight guests.</p>
+      <div class="photos">
+        <figure><img class="room-photo" src="queen-green-headboard.webp" alt="Queen bed with a green upholstered headboard" width="1050" height="700" loading="lazy" decoding="async"><figcaption>Queen bedroom with green headboard</figcaption></figure>
+        <figure><img class="room-photo" src="queen-wood-headboard.webp" alt="Queen bed with a wood headboard and two framed prints" width="1050" height="700" loading="lazy" decoding="async"><figcaption>Queen bedroom with wood headboard</figcaption></figure>
+      </div>
+    </section>
+    <section>
+      <h2>Living room sleeper sofas</h2>
+      <p>Both living room sofas convert into beds. For help setting them up, please message us through your booking platform.</p>
+      <div class="photos"><img class="room-photo" src="living-room.webp" alt="Living room with two cream-colored sleeper sofas" width="1050" height="700" loading="lazy" decoding="async"></div>
+    </section>
+    <section>
+      <h2>Twin air mattresses</h2>
+      <p>For reservations with more than eight guests, two twin air mattresses are available as needed in the linen closet. Each has a built-in pump.</p>
     </section>
     <p><a href="../../">Back to The Sweet Magnolia Stays</a></p>
   </main>
