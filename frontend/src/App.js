@@ -28,12 +28,12 @@ export default function App() {
     >
       <div className="grain-overlay" aria-hidden="true" />
       <main>
-        <nav aria-label="Raleigh guest guide" className="relative z-10 bg-[#232F26] px-4 py-3 text-center text-[#F7F5F0]">
+        <nav aria-label="Sleeping arrangements" className="relative z-10 bg-[#232F26] px-4 py-3 text-center text-[#F7F5F0]">
           <a
             className="inline-block text-sm font-semibold underline underline-offset-4"
-            href={process.env.PUBLIC_URL + "/raleigh/sleeping-arrangement/"}
+            href={process.env.PUBLIC_URL + "/sleeping-arrangements/"}
           >
-            The Sweet Magnolia Raleigh/Cary | Sleeping Arrangements (Beds &amp; Bedding)
+            Sleeping Arrangements (Beds &amp; Bedding)
           </a>
         </nav>
         <Hero />
