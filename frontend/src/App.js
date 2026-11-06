@@ -33,7 +33,7 @@ export default function App() {
             className="inline-block text-sm font-semibold underline underline-offset-4"
             href={process.env.PUBLIC_URL + "/raleigh/sleeping-arrangement/"}
           >
-            Raleigh · Sleeping arrangement
+            The Sweet Magnolia Raleigh/Cary | Sleeping Arrangements (Beds &amp; Bedding)
           </a>
         </nav>
         <Hero />
