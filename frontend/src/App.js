@@ -21,6 +21,7 @@ const properties = [
     alt: "Raleigh/Cary living room with two cream-colored sofas",
     description: "Bring the whole group to a four-bedroom home for up to 12 guests, with a game room and Google Fiber near Fenton.",
     guide: "/raleigh/sleeping-arrangement/",
+    airbnb: "https://www.airbnb.com/rooms/1810285332142315408",
   },
 ];
 
