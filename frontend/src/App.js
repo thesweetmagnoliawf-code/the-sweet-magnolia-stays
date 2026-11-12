@@ -9,16 +9,16 @@ import Footer from "@/components/Footer";
 const properties = [
   {
     name: "Wake Forest",
-    image: "/wake-forest/sleeping-arrangement/king-bedroom.webp",
-    alt: "King bed in the Wake Forest primary bedroom",
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1746080455304621391/original/52fa2424-33ec-4dbd-85f2-418e509e6e16.jpeg?im_w=960",
+    alt: "Wake Forest Airbnb cover photo",
     description: "Stay in downtown Wake Forest with a dedicated home office, 2 Gig fiber Wi-Fi, and a private garage with Level 2 EV charging.",
     guide: "/wake-forest/sleeping-arrangement/",
     airbnb: "https://www.airbnb.com/rooms/1746080455304621391",
   },
   {
     name: "Raleigh/Cary",
-    image: "/raleigh/sleeping-arrangement/living-room.webp",
-    alt: "Raleigh/Cary living room with two cream-colored sofas",
+    image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1810285332142315408/original/3d60ce07-12ea-49d1-9075-2ba4dcea9017.jpeg?im_w=960",
+    alt: "Raleigh/Cary Airbnb cover photo",
     description: "Bring the whole group to a four-bedroom home for up to 12 guests, with a game room and Google Fiber near Fenton.",
     guide: "/raleigh/sleeping-arrangement/",
     airbnb: "https://www.airbnb.com/rooms/1810285332142315408",
@@ -39,7 +39,7 @@ function PropertyCards() {
           <article key={name} className="flex flex-col overflow-hidden rounded-xl border border-[#232F26]/20 bg-[#FFFDF8]">
             <img
               className="aspect-[3/2] w-full object-cover"
-              src={process.env.PUBLIC_URL + image}
+              src={image}
               alt={alt}
               width="1050"
               height="700"
